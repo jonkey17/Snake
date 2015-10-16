@@ -1,6 +1,5 @@
 'use strict';
 (function(){
-  console.log('start2');
   window.addEventListener('load', init, false);
   window.addEventListener('resize', resize, false);
   var canvas = null, ctx = null;
