@@ -1,5 +1,6 @@
 'use strict';
 (function(){
+  console.log('start2');
   window.addEventListener('load', init, false);
   window.addEventListener('resize', resize, false);
   var canvas = null, ctx = null;
@@ -89,7 +90,7 @@
   mainScene.paint=function(ctx){
     ctx.fillStyle='#030';
     ctx.fillRect(0,0,canvas.width,canvas.height);
-    
+
     ctx.fillStyle='#fff';
     ctx.textAlign='center';
     ctx.fillText('SNAKE',150,60);
@@ -205,7 +206,7 @@
         ctx.fillText('GAME OVER',150,75);
       else
         ctx.fillText('PAUSE',150,75);
-      
+
     }
   }
 
@@ -219,7 +220,7 @@
   highscoresScene.paint = function(ctx){
     ctx.fillStyle='#030';
     ctx.fillRect(0,0,canvas.width,canvas.height);
-    
+
     ctx.fillStyle='#fff';
     ctx.textAlign='center';
     ctx.fillText('HIGH SCORES',150,30);
@@ -270,12 +271,12 @@
       ctx.strokeRect(this.x,this.y,this.width,this.height);
     }
   }
-  
+
 
   function random(max){
     return Math.floor(Math.random()*max);
   }
-  
+
   function addHighscore(score){
     var i = 0;
     while(i<highscores.length && score<=highscores[i]){
